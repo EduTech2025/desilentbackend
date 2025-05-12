@@ -37,3 +37,9 @@ def login_view(request):
 def logout_view(request):
     request.user.auth_token.delete()  # delete the current token
     return Response({'message': 'Logged out successfully!'}, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def user_detail_view(request):
+    serializer = SignUpSerializer(request.user)
+    return Response(serializer.data, status=status.HTTP_200_OK)
