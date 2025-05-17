@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'users',
+    'blogs',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
