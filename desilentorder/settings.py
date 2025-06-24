@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mo82f$73x9lgidni9#w4jdj%q7q^f-yf$lcmhk9^1btv3$^bs$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['desilentbackend.onrender.com', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -58,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "desilentbackend.onrender.com",  
     "http://localhost:3000",  # Adjust as per your frontend port
     "http://127.0.0.1:3000",
 ]
