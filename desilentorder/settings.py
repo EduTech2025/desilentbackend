@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "desilentbackend.onrender.com",  
+    "https://desilentbackend.onrender.com",  
     "http://localhost:3000",  # Adjust as per your frontend port
     "http://127.0.0.1:3000",
 ]
