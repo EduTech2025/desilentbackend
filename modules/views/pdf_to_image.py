@@ -2,7 +2,7 @@ import os
 import zipfile
 import tempfile
 from datetime import datetime
-import fitz  # PyMuPDF
+import fitz  
 from django.http import FileResponse, HttpResponse
 from django.views import View
 from django.utils.decorators import method_decorator

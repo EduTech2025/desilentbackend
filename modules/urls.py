@@ -5,7 +5,7 @@ from modules.views.pdf_to_excel import PDFToExcelView
 
 from django.urls import path
 
-from modules.views.word_to_pdf import WordAndPPTToPDFView
+# from modules.views.word_to_pdf import WordAndPPTToPDFView
 from modules.views.compress_pdf import CompressPDFView
 from modules.views.lock_unlock_pdf import LockUnlockPDFView
 from modules.views.protect_pdf import ProtectPDFView
@@ -14,7 +14,7 @@ from modules.views.pagenumber_pdf import AddPageNumberView
 from modules.views.add_watermark_to_pdf import AddWatermarkToPDF
 from modules.views.repair_pdf import RepairPDFView
 from modules.views.excel_to_pdf import ExcelToPDFView
-from modules.views.image_background_remove import RemoveImageBackground
+# from modules.views.image_background_remove import RemoveImageBackground
 from modules.views.muiltple_pdf_merge import MergePDFsView
 from modules.views.pdf_rotator_tool import PDFRotateView
 from modules.views.pdf_to_image import  PDFToImagesView
@@ -28,7 +28,7 @@ from modules.views.pdf_rotator_tool import PDFRotateView
 
 urlpatterns = [
     path('translate/', TranslationAPIView.as_view(), name='translate'),
-    path('image-bg-remover/', RemoveImageBackground.as_view(), name='image-bg-remover'),
+    # path('image-bg-remover/', RemoveImageBackground.as_view(), name='image-bg-remover'),
     path('pdf-to-word/', pdf_to_word, name='pdf_to_word'),
     path('merge-pdfs/', MergePDFsView.as_view(), name='merge_pdfs'),
     
@@ -47,6 +47,6 @@ urlpatterns = [
      path('lock-unlock-pdf/', LockUnlockPDFView.as_view(), name='lock_unlock_pdf'),
      path('protect-pdf/', ProtectPDFView.as_view(), name='protect_pdf'),
      path('compress-pdf/', CompressPDFView.as_view(), name='compress_pdf'),
-     path('word-ppt-to-pdf/', WordAndPPTToPDFView.as_view(), name='word_ppt_to_pdf'),
+    #  path('word-ppt-to-pdf/', WordAndPPTToPDFView.as_view(), name='word_ppt_to_pdf'),
 
 ]

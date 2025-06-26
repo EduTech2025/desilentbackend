@@ -3,8 +3,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from PyPDF2 import PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.colors import Color
 from io import BytesIO
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt

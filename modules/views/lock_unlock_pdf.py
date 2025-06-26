@@ -1,4 +1,4 @@
-import os
+
 import re
 from io import BytesIO
 from django.views import View

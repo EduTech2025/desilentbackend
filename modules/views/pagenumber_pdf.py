@@ -6,7 +6,6 @@ from PyPDF2 import PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.colors import HexColor
-from reportlab.pdfbase.ttfonts import TTFont
 from django.http import FileResponse, HttpResponse
 from django.views import View
 from django.utils.decorators import method_decorator
