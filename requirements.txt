@@ -10,7 +10,6 @@ coloredlogs==15.0.1
 # comtypes==1.4.11
 cryptography==45.0.4
 Django==5.2.3
-python-3.10.11
 django-cors-headers==4.7.0
 djangorestframework==3.16.0
 et_xmlfile==2.0.0
