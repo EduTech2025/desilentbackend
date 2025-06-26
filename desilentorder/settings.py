@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'desilentorder.wsgi.application --bind 0.0.0.0:$PORT'
+WSGI_APPLICATION = 'desilentorder.wsgi.application'
 
 
 # Database
