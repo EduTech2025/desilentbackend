@@ -24,10 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mo82f$73x9lgidni9#w4jdj%q7q^f-yf$lcmhk9^1btv3$^bs$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['desilentbackend.onrender.com','192.168.234.248','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+     "http://127.0.0.1:3000",
+    "http://192.168.234.248:3000",
+]
 
 # Application definition
 
@@ -62,6 +67,8 @@ CORS_ALLOWED_ORIGINS = [
    "https://desilentbackend.onrender.com",  
     "http://localhost:3000",  # Adjust as per your frontend port
     "http://127.0.0.1:3000",
+    "http://192.168.234.248:3000",
+
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -154,3 +161,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOW_ALL_ORIGINS = True
