@@ -5,7 +5,6 @@ from modules.views.pdf_to_excel import PDFToExcelView
 
 from django.urls import path
 
-from modules.views.word_to_pdf import WordAndPPTToPDFView
 from modules.views.compress_pdf import CompressPDFView
 from modules.views.lock_unlock_pdf import LockUnlockPDFView
 from modules.views.protect_pdf import ProtectPDFView
@@ -47,6 +46,4 @@ urlpatterns = [
      path('lock-unlock-pdf/', LockUnlockPDFView.as_view(), name='lock_unlock_pdf'),
      path('protect-pdf/', ProtectPDFView.as_view(), name='protect_pdf'),
      path('compress-pdf/', CompressPDFView.as_view(), name='compress_pdf'),
-     path('word-ppt-to-pdf/', WordAndPPTToPDFView.as_view(), name='word_ppt_to_pdf'),
-
 ]
