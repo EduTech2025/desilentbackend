@@ -19,7 +19,7 @@ from modules.views.muiltple_pdf_merge import MergePDFsView
 from modules.views.pdf_rotator_tool import PDFRotateView
 from modules.views.pdf_to_image import  PDFToImagesView
 from modules.views.pdf_to_word import pdf_to_word
-from modules.views.translater import TranslationAPIView
+# from modules.views.translater import TranslationAPIView
 
 from modules.views.split_pdf import SplitPDFView
 from modules.views.pagenumber_pdf import AddPageNumberView
@@ -27,7 +27,7 @@ from modules.views.pdf_rotator_tool import PDFRotateView
 
 
 urlpatterns = [
-    path('translate/', TranslationAPIView.as_view(), name='translate'),
+    # path('translate/', TranslationAPIView.as_view(), name='translate'),
     # path('image-bg-remover/', RemoveImageBackground.as_view(), name='image-bg-remover'),
     path('pdf-to-word/', pdf_to_word, name='pdf_to_word'),
     path('merge-pdfs/', MergePDFsView.as_view(), name='merge_pdfs'),
