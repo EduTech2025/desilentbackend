@@ -9,4 +9,6 @@ urlpatterns = [
     path('blogger/', include('blogs.urls')),  # API routes for blogs app: /api/blogs/...
     path('api/', include('contact.urls')),
     path('api/', include('courses.urls')),
+    path('pdf/', include('modules.urls')),
+    
 ]
