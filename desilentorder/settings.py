@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blogs',
     'courses',
     'modules',
+    'myapp',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',

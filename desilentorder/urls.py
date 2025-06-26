@@ -10,5 +10,5 @@ urlpatterns = [
     path('api/', include('contact.urls')),
     path('api/', include('courses.urls')),
     path('pdf/', include('modules.urls')),
-    
+    path('', include('myapp.urls')),
 ]
