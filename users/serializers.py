@@ -6,10 +6,7 @@ class SignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = [
-            'email', 'password', 'full_name', 'date_of_birth', 'gender', 'is_superuser',
-            'is_school', 'school_name', 'grade', 'college_year', 'university_name'
-        ]
+        fields = '__all__'
 
     def create(self, validated_data):
         password = validated_data.pop('password')

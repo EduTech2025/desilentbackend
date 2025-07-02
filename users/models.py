@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
+import uuid
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
@@ -21,9 +22,10 @@ class CustomUserManager(BaseUserManager):
 
         return self.create_user(email, password, **extra_fields)
 
-
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     GENDER_CHOICES = (('M', 'Male'), ('F', 'Female'), ('O', 'Other'))
+
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
 
     email = models.EmailField(unique=True)
     full_name = models.CharField(max_length=100)
