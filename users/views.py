@@ -1,9 +1,10 @@
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
-from django.contrib.auth import authenticate
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from django.contrib.auth import authenticate, get_user_model
 from rest_framework.authtoken.models import Token
+from rest_framework.views import APIView
 
 from .serializers import SignUpSerializer
 
@@ -43,3 +44,14 @@ def logout_view(request):
 def user_detail_view(request):
     serializer = SignUpSerializer(request.user)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+User = get_user_model()
+
+class UsersListView(APIView):
+    permission_classes = [IsAuthenticated, IsAdminUser]  # Only admins can access
+
+    def get(self, request):
+        users = User.objects.all()
+        serializer = SignUpSerializer(users, many=True)
+        return Response(serializer.data)

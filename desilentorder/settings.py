@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'courses',
     'modules',
     'myapp',
+    'student_dashboard',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
