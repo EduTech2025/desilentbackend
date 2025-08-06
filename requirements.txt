@@ -13,7 +13,7 @@ Django
 django-cors-headers==4.7.0
 djangorestframework==3.16.0
 et_xmlfile==2.0.0
-fire==0.7.0
+# fire==0.7.0
 flatbuffers==25.2.10
 fonttools==4.58.4
 # googletrans==4.0.0
@@ -77,3 +77,4 @@ typing_extensions==4.14.0
 tzdata==2025.2
 urllib3==2.4.0
 xlsx2html==0.6.2
+
