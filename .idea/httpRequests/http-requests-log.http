@@ -1,0 +1,71 @@
+POST http://127.0.0.1:8000/blogger/blogs/
+Content-Type: application/json
+Content-Length: 423
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "header_image": "http://example.com/image.jpg",
+  "heading": "My First Blog",
+  "description": [
+    {
+      "subheading": "Intro",
+      "paragraph": "This is the introduction.",
+      "images": ["img1.jpg", "img2.jpg"]
+    },
+    {
+      "subheading": "Details",
+      "paragraph": "Here are the details.",
+      "images": []
+    }
+  ],
+  "created_by": "admin",
+  "updated_by": "admin",
+  "blog_id": "unique-id-001"
+}
+
+<> 2025-06-28T172725.400.json
+
+###
+
+POST http://127.0.0.1:8000/blogger/blogs/
+Content-Type: text/plain, application/json
+Content-Length: 423
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "header_image": "http://example.com/image.jpg",
+  "heading": "My First Blog",
+  "description": [
+    {
+      "subheading": "Intro",
+      "paragraph": "This is the introduction.",
+      "images": ["img1.jpg", "img2.jpg"]
+    },
+    {
+      "subheading": "Details",
+      "paragraph": "Here are the details.",
+      "images": []
+    }
+  ],
+  "created_by": "admin",
+  "updated_by": "admin",
+  "blog_id": "unique-id-001"
+}
+
+<> 2025-06-28T172633.415.json
+
+###
+
+GET https://examples.http-client.intellij.net/get?generated-in=PyCharm
+User-Agent: IntelliJ HTTP Client/PyCharm 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-28T172340.200.json
+
+###
+

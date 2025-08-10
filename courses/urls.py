@@ -1,16 +1,16 @@
 from django.urls import path
-from . import views
+from courses.views.course_view import CourseView
+from courses.views.session_view import SessionView
+from courses.views.comment_view import CommentView
+from courses.views.project_view import ProjectSubmissionAPI
+
+
+from courses.views.feedback_view import FeedbackView
 
 urlpatterns = [
-    # Course URLs
-    path('courses/', views.course_list_create),
-    path('courses/<uuid:course_id>/', views.course_detail),
-
-    # Session URLs
-    path('sessions/', views.session_list_create),
-    path('sessions/<uuid:session_id>/', views.session_detail),
-
-    # Comment URLs
-    path('comments/', views.comment_list_create),
-    path('comments/<uuid:comment_id>/', views.comment_detail),
+    path('course/', CourseView.as_view(), name='course-aditya'),
+    path('session/', SessionView.as_view(), name='session-api'),
+    path('comments/', CommentView.as_view(), name='comment-api'),
+    path('projects/', ProjectSubmissionAPI.as_view(), name='project-api'),
+    path('feedbacks/', FeedbackView.as_view(), name='feedback-api'),
 ]
