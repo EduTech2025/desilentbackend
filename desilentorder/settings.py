@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'courses',
     'modules',
     'myapp',
-    'student_dashboard',
+    'dashboard',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
@@ -104,12 +104,29 @@ WSGI_APPLICATION = 'desilentorder.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'desilentorder',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'npg_oyITe7VCr3Yv',
+        'HOST': 'ep-dawn-cherry-a1l8cda6-pooler.ap-southeast-1.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'channel_binding': 'require',
+        },
     }
 }
+
+
 
 # Maine daale hai
 AUTH_USER_MODEL = 'users.CustomUser'
