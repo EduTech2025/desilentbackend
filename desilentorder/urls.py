@@ -7,8 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),         # Django admin site
     path('api/', include('users.urls')),     # API routes for users app: /api/...
     path('blogger/', include('blogs.urls')),  # API routes for blogs app: /api/blogs/...
-    path('api/', include('contact.urls')),
-    path('api/', include('courses.urls')),
+    path('contact/', include('contact.urls')),
+    path('courses/', include('courses.urls')),
     path('pdf/', include('modules.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('', include('myapp.urls')),
