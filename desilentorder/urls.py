@@ -6,9 +6,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),         # Django admin site
     path('api/', include('users.urls')),     # API routes for users app: /api/...
-    path('blogger/', include('blogs.urls')),  # API routes for blogs app: /api/blogs/...
-    path('contact/', include('contact.urls')),
-    path('courses/', include('courses.urls')),
+    path('blogger/', include('blogs.urls')),  # API routes for blogs app: /api/blogs/...       # all user APIs start with /api/users/
+    path('api/contact/', include('contact.urls')),   # all contact APIs start with /api/contact/
+    path('api/courses/', include('courses.urls')), 
     path('pdf/', include('modules.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('', include('myapp.urls')),
