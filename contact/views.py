@@ -32,7 +32,7 @@ class ContactAPIView(APIView):
                 subject=f'Contact Form: {subject}',
                 message=full_message,
                 from_email=email,
-                recipient_list=['recipient.email@example.com'],  # your receiving email
+                recipient_list=['desilentorder@proton.me','support@desilentorder.in'],
                 fail_silently=False,
             )
             return Response({'message': 'Email sent successfully!'}, status=status.HTTP_200_OK)
