@@ -19,6 +19,7 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault('date_of_birth', '1990-01-01')
         extra_fields.setdefault('gender', 'M')
         extra_fields.setdefault('is_school', False)
+        extra_fields.setdefault('isConsentSign', False)
 
         return self.create_user(email, password, **extra_fields)
 
@@ -42,6 +43,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     university_name = models.CharField(max_length=255, blank=True, null=True)
 
     is_active = models.BooleanField(default=True)
+    
+    # ✅ New field
+    isConsentSign = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
 
     objects = CustomUserManager()
