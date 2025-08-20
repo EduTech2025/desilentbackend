@@ -72,7 +72,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Adjust as per your frontend port
     "http://127.0.0.1:3000",
     "http://192.168.234.248:3000",
-    "https://desilentorder.in/"
+    "https://desilentorder.in"
 
 ]
 
