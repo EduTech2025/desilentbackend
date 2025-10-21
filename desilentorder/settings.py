@@ -26,25 +26,20 @@ SECRET_KEY = 'django-insecure-mo82f$73x9lgidni9#w4jdj%q7q^f-yf$lcmhk9^1btv3$^bs$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.0.3.146', 'localhost', '127.0.0.1','desilentorder.in']
+ALLOWED_HOSTS = ['34.0.3.146', 'localhost', '127.0.0.1']
 
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
      "http://127.0.0.1:3000",
     "http://192.168.234.248:3000",
-    "https://desilentorder.in/"
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
     'users',
-    'blogs',
-    'courses',
-    'modules',
-    'myapp',
-    'dashboard',
+    'desilentorder',
     'rest_framework',
     'corsheaders',
     'rest_framework.authtoken',
@@ -72,7 +67,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Adjust as per your frontend port
     "http://127.0.0.1:3000",
     "http://192.168.234.248:3000",
-    "https://desilentorder.in/"
 
 ]
 
